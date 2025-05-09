@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AEROVOLT | The Capstone Journey</title>
+    <link rel="icon" href="Website/AeroVolt icon no bg.png" type="image/png">
+    <style>
+        :root {
+            --primary-color: #1a5276;
+            --secondary-color: #2e86c1;
+            --accent-color: #3498db;
+            --light-bg: #ecf0f1;
+            --white: #ffffff;
+            --dark-text: #2c3e50;
+            --light-text: #7f8c8d;
+        }
+        
+        body {
+            font-family: 'Arial', 'Helvetica', sans-serif;
+            line-height: 1.8;
+            color: var(--dark-text);
+            background-color: var(--light-bg);
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 0;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 5rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        
+        .tagline {
+            font-size: 1.5rem;
+            opacity: 0.9;
+            margin-top: 0.5rem;
+        }
+        
+        section {
+            background-color: var(--white);
+            border-radius: 4px;
+            padding: 3rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            margin-top: 0;
+            font-size: 3rem;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            font-size: large;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 0.75rem 2rem;
+            border-radius: 3px;
+            text-decoration: none;
+            margin-top: 1.5rem;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        
+        .btn:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: var(--light-text);
+            font-size: 0.9rem;
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+        
+        .section-image {
+            width: 100%;
+            height: 300px;
+            background-color: #ffffff;
+            margin-bottom: 2rem;
+            border-radius: 4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--light-text);
+            font-style: italic;
+        }
+        
+        .team-section {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+        }
+        
+        .team-member {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 1rem;
+        }
+        
+        .team-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: #d6eaf8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--light-text);
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+        
+        .team-name {
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .team-role {
+            color: var(--light-text);
+            font-size: 0.9rem;
+        }
+        
+        ul {
+            margin-bottom: 1.5rem;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .key-point {
+            background-color: rgba(52, 152, 219, 0.1);
+            padding: 1.5rem;
+            border-left: 4px solid var(--accent-color);
+            margin-bottom: 2rem;
+        }
+        
+        @media (max-width: 768px) {
+            section {
+                padding: 2rem;
+            }
+            
+            .team-section {
+                justify-content: center;
+            }
+        .team-photo{
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--light-text);
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>AeroVolt</h1>
+            <p class="tagline">A simple solution for a complex problem.</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="about">
+            <h2>About Us</h2>
+            <div class="section-image">
+                <p>Team Group Image Placeholder</p>
+            </div>
+            <p>This Capstone journey brings together a dedicated team of professionals with diverse expertise in research, development, and implementation. Established with the mission to address contemporary challenges through innovative approaches, our collective experience spans multiple disciplines and sectors.</p>
+            <p>Our collaborative methodology leverages cutting-edge research and industry best practices to develop comprehensive solutions that create measurable impact. Each team member contributes unique insights derived from rigorous academic training and extensive field experience.</p>
+            
+            <div class="team-section">
+                <div class="team-member">
+                    <div class="team-photo">
+                        <img src="aziz circle.png" alt="AbdEl-Aziz Gamal" width="175" height="175">
+                    </div>
+                    <div class="team-name">AbdEl-Aziz Gamal</div>
+                    <div class="team-role">Content Writer</div>
+                </div>
+                <div class="team-member">
+                    <div class="team-photo">
+                        <img src="asser circle.png" alt="Asser Sameh" width="175" height="175">
+                    </div>
+                    <div class="team-name">Asser Sameh</div>
+                    <div class="team-role">Content Writer</div>
+                    <div class="team-role">& Designer</div>
+                </div>
+                <div class="team-member">
+                    <div class="team-photo">
+                        <img src="danieeeel circle.png" alt="Daniel George" width="175" height="175">
+                    </div>
+                    <div class="team-name">Daniel George</div>
+                    <div class="team-role">Content Writer</div>
+                    <div class="team-role">& Designer</div>
+                </div>
+                <div class="team-member">
+                    <div class="team-photo">
+                        <img src="eyad circle.png" alt="Eyad Ahmed" width="175" height="175">
+                    </div>
+                    <div class="team-name">Eyad Ahmed</div>
+                    <div class="team-role">Content Writer</div>
+                    <div class="team-role">& Prototype Constructor</div>
+                </div>
+                <div class="team-member">
+                    <div class="team-photo">
+                        <img src="hamza circle.png" aly="Hamza El-Azab" width="175" height="175">
+                    </div>
+                    <div class="team-name">Hamza El-Azab</div>
+                    <div class="team-role">Prototype Constructor</div>
+                </div>
+            </div>
+        </section>
+
+        <section id="problem">
+            <h2>The Problem</h2>
+            <div class="section-image">
+                <img src="blackout.jpg" alt="Blackout image" width="600" height="300">
+            </div>
+            <p>Egypt has been suffering lately from a shortage in domestic gas production, which the officials said to have sparked the blackout problems in the first place (Human Rights Watch, 2023). Additionally, the gas production rate in Egypt has decreased from its peak in 2021 by 25% and is also predicted to decline by a further 22.5% (Spandana Janapati, 2024). This decrease in production puts the danger of the return of electricity blackouts in the summer months back into reality.</p>
+            
+            <div class="key-point">
+                <p>Research indicates that the rural areas in Egypt were found to be the most affected by the cuts. Where areas in the cities suffered up to 2 hours, villages experienced up to 3 hours. This increase in cut-off time accompanied by the hot temperatures led to the suffering of many of the residents and their inability to work (Human Rights Watch, 2023).</p>
+            </div>
+            
+            <ul>
+                <li><strong>Deterioration of Healthcare Services:</strong> If the lack of sustainable electricity or its complete cut-off in hospitals or health centres due to the gas production problem continues, it will mean that some equipment such as ventilators, incubators, and dialysis machines will not function, or even get destroyed due to energy fluctuations.</li>
+                <li><strong>Increased Poverty and Economic Decline:</strong> Without the jobs that this project provides, the rate of poverty will increase. Also, small businesses such as bakeries, grocery stores, and workshops depend on electricity that will not be available all the time with fluctuations predicted in the energy flow. Thus, it results in lower productivity.</li>
+                <li><strong>Declining Education and Social Development:</strong> Sustainable energy is essential for any rural area, whether it is used to allow young students to study at nighttime, access information through the internet, or use their computers and laptops. All these actions would not be possible if renewable energy weren’t utilized in regions in need.</li>
+            </ul>
+            
+            <p>These challenges have persisted despite incremental improvements, indicating the need for a paradigm shift in approaching more actions rather than addressing problems.</p>
+        </section>
+
+        <section id="solution">
+            <h2>Our Solution</h2>
+            <div class="section-image">
+                <img src="Prototype photo.jpg" alt="Image of our Prototype" width="500" height="325">
+            </div>
+            <p>To solve this problem, we chose VAWTs (Vertical Axis Wind Turbines) as the solution. VAWTs are suitable for residential areas due to their simple reparation and conservation processes. That is because the gearbox, the generators, and all of the mechanism is located at the bottom of the turbine. The blades of the turbine are aligned on a vertical axis, which gives them a unique advantage, which is picking up air from any direction. These things reduce the cost of VAWTs by not having to make a yaw system to change their direction to be with the wind’s.</p>
+            <p>The location chosen for building the VAWT is in El-Menia University. That is to help the learning process improve as when electricity is more available, students will be able to learn better and therefore create their own electricity ideas in the future. The location is also suitable because the average wind speed there has a maximum of 23mph (10.28 m/s), and an average of 9.72mph (4.345m/s). The average air density there is 1.2 kg/m^3.</p>
+            
+            
+            <p>The prototype was able to produce 269.76 joules after 5 minutes, it worked effectively at wind speeds ranging from 3 to 12. Finally, the prototype was able to acknowledge prior weaknesses found in other renewable energy sources, such as the Esna hydroelectric station, which had the problem of fluctuating energy generation in varying environmental conditions. These results validate the prototype’s ability to be implemented in numerous real-life applications.</p>
+            
+            <div style="text-align: center;">
+                <a href="result.html" class="btn">See full result analysis</a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 AeroVolt | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Professional hover effects for interactive elements
+            const buttons = document.querySelectorAll('.btn');
+            buttons.forEach(button => {
+                button.addEventListener('mouseenter', function() {
+                    this.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
+                });
+                button.addEventListener('mouseleave', function() {
+                    this.style.boxShadow = 'none';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

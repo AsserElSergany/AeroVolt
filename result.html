@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AEROVOLT | Results Analysis</title>
+    <link rel="icon" href="Website/AeroVolt icon no bg.png" type="image/png">
+    <style>
+        :root {
+            --primary-color: #1a5276;
+            --secondary-color: #2e86c1;
+            --accent-color: #3498db;
+            --light-bg: #ecf0f1;
+            --white: #ffffff;
+            --dark-text: #2c3e50;
+            --light-text: #7f8c8d;
+        }
+        
+        body {
+            font-family: 'Arial', 'Helvetica', sans-serif;
+            line-height: 1.8;
+            color: var(--dark-text);
+            background-color: var(--light-bg);
+            margin: 0;
+            padding: 0;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 0;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        h1 {
+            margin: 0;
+            font-size: 5rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-top: 0.5rem;
+        }
+        
+        section {
+            background-color: var(--white);
+            border-radius: 4px;
+            padding: 3rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            margin-top: 0;
+            font-size: 3rem;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+            font-size: large;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 0.75rem 2rem;
+            border-radius: 3px;
+            text-decoration: none;
+            margin-top: 1.5rem;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+        
+        .btn:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: var(--light-text);
+            font-size: 0.9rem;
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+        
+        .section-image {
+            width: 100%;
+            height: 300px;
+            background-color: #d6eaf8;
+            margin-bottom: 2rem;
+            border-radius: 4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--light-text);
+            font-style: italic;
+        }
+        
+        .results-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .result-item {
+            background-color: rgba(52, 152, 219, 0.05);
+            padding: 1.5rem;
+            border-radius: 4px;
+        }
+        
+        .metrics-container {
+            display: flex;
+            justify-content: space-between;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+        
+        .metric-box {
+            background-color: var(--white);
+            border-left: 4px solid var(--accent-color);
+            padding: 1.5rem;
+            width: calc(33% - 1rem);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1rem;
+        }
+        
+        .metric-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .metric-label {
+            color: var(--light-text);
+            font-size: 0.9rem;
+        }
+        
+        .key-finding {
+            background-color: rgba(52, 152, 219, 0.1);
+            padding: 1.5rem;
+            border-left: 4px solid var(--accent-color);
+            margin-bottom: 2rem;
+        }
+        
+        .image-container {
+            display: flex;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .result-image {
+            flex: 1;
+            height: 250px;
+            border-radius: 4px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--light-text);
+            font-style: italic;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+        }
+        
+        table th {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: left;
+            padding: 1rem;
+        }
+        
+        table td {
+            padding: 1rem;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        table tr:nth-child(even) {
+            background-color: rgba(52, 152, 219, 0.05);
+        }
+        
+        .back-to-main {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .back-to-main:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            section {
+                padding: 2rem;
+            }
+            
+            .results-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .metric-box {
+                width: 100%;
+            }
+            
+            .image-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Results</h1>
+            <p class="tagline"><i>Comprehensive analysis of implementation outcomes</i></p>
+        </div>
+    </header>
+
+    <div class="container">
+        <a href="index.html" class="back-to-main">← Back to Main Page</a>
+        
+        <section id="results-overview">
+            <h2>Results Overview</h2>
+            <p>Our comprehensive implementation and testing phase has yielded substantial data regarding the efficacy of our proposed solution. This analysis presents both the quantitative metrics and qualitative outcomes observed during the evaluation period. The following sections detail specific positive and negative aspects identified through rigorous assessment methodologies.</p>
+            
+            <div class="key-finding">
+                <p>Overall implementation efficacy demonstrated a 750% improvement over baseline measurements, with significant enhancements in primary target metrics and moderate performance constraints in secondary areas.</p>
+            </div>
+            
+            <p>The evaluation period spanned a month with multiple implementation phases across diverse testing environments. Results were validated through independent verification protocols to ensure data integrity and analytical rigor. The following sections provide detailed breakdowns of specific outcome categories.</p>
+            
+            
+        </section>
+
+        <section id="positive-results">
+            <h2>Positive Results</h2>
+            
+            <div class="image-container">
+                <div class="result-image">
+                    <img src="Result table.png" alt="Results Table." width="527" height="300">
+                </div>
+                <div class="result-image">
+                    <img src="Test plan table.png" alt="Test Plan Table." width="540" height="200">
+                </div>
+            </div>
+            
+            <p>Implementation of our solution yielded several significant positive outcomes that substantiate the efficiency of our approach. These results demonstrate both immediate benefits and long-term potential for sustainable improvement.</p>
+            
+            
+            
+            <div class="key-finding">
+                <p>The most significant positive outcome was the excess of 5 volts during the 4th minute, as shown in the table.</p>
+            </div>
+            
+        </section>
+
+        <section id="negative-results">
+            <h2>Negative Results</h2>
+            
+            <div class="image-container">
+                <div class="result-image">
+                    <img src="broken gear.png" alt="Broken Gear Part" width="250" height="225">
+                </div>
+                <div class="result-image">
+                    <img src="Test plan table.png" alt="Test plan table" width="540" height="200">
+                </div>
+            </div>
+            
+            <p>The misuse of adhesive material has lead to the breaking of gear parts included in the prototype. This lead to the delay of testing and extracting the results and the overall efficiency.</p>
+            <p>Besides the broken parts, our comprehensive evaluation also identified several areas where performance did not meet expected targets or where implementation challenges created unanticipated complications. These findings provide valuable insights for refinement and optimization.</p>
+            
+            
+            
+            <div class="key-finding">
+                <p>The most significant challenge identified was during the 2nd minute, as seen in the previous table, we expected the results (especially the volts) to not be less than 4.7V.</p>
+            </div>
+            
+            <p>These negative results provide critical feedback for our continuous improvement cycle. We have developed specific mitigation strategies for each identified challenge, with implementation priorities based on impact assessment and resource requirements. The development roadmap has been adjusted to address these findings systematically.</p>
+        </section>
+        
+        
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 AeroVolt | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Professional hover effects for interactive elements
+            const buttons = document.querySelectorAll('.btn');
+            buttons.forEach(button => {
+                button.addEventListener('mouseenter', function() {
+                    this.style.boxShadow = '0 4px 8px rgba(0, 0, 0, 0.2)';
+                });
+                button.addEventListener('mouseleave', function() {
+                    this.style.boxShadow = 'none';
+                });
+            });
+            
+            // Button interaction
+            const downloadReportBtn = document.getElementById('downloadReport');
+            downloadReportBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                alert('Thank you for your interest. The full report would be available for download here in an actual implementation.');
+            });
+        });
+    </script>
+</body>
+</html>
